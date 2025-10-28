@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe • Neon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <h1 class="title">TIC • TAC • TOE</h1>
+      <div class="controls">
+        <div class="modes">
+          <label class="toggle">
+            <input id="modeToggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <span id="modeLabel">Player vs Player</span>
+        </div>
+
+        <div class="options">
+          <label for="firstSelect">Who starts?</label>
+          <select id="firstSelect">
+            <option value="X">Player (X)</option>
+            <option value="O">Computer (O)</option>
+          </select>
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="left-panel">
+        <div class="board-wrapper">
+          <div id="board" class="board">
+            <!-- 9 cells will be injected by JS -->
+          </div>
+          <div id="winLine" class="win-line"></div>
+        </div>
+        <div class="game-footer">
+          <div class="scoreboard">
+            <div class="score">
+              <div class="label">X</div>
+              <div id="scoreX" class="value">0</div>
+            </div>
+            <div class="score">
+              <div class="label">Draw</div>
+              <div id="scoreD" class="value">0</div>
+            </div>
+            <div class="score">
+              <div class="label">O</div>
+              <div id="scoreO" class="value">0</div>
+            </div>
+          </div>
+          <div id="status" class="status">Ready</div>
+        </div>
+      </section>
+
+      <aside class="right-panel">
+        <div class="info neon-card">
+          <h2>Features</h2>
+          <ul>
+            <li>Neon glowing board + animations</li>
+            <li>Player vs Player & Player vs Computer (Smart AI)</li>
+            <li>Sound effects (click & win)</li>
+            <li>Win-line animation & highlight</li>
+            <li>Responsive for mobile</li>
+          </ul>
+          <p class="hint">Tip: Toggle mode and pick who starts. Computer uses an optimized strategy (minimax).</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
